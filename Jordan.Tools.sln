@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jordan.Tools.Strings", "src\Jordan.Tools.Strings\Jordan.Tools.Strings.csproj", "{80B57496-9E08-4061-B485-58A75D9301B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3C70037C-EA35-427D-8764-4A0A3D6D393E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Strings.Tests", "tests\Jordan.Tools.Strings.Tests\Jordan.Tools.Strings.Tests.csproj", "{B130FC83-F7EF-451D-A24E-DB2520895117}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80B57496-9E08-4061-B485-58A75D9301B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B57496-9E08-4061-B485-58A75D9301B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B57496-9E08-4061-B485-58A75D9301B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B57496-9E08-4061-B485-58A75D9301B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B130FC83-F7EF-451D-A24E-DB2520895117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B130FC83-F7EF-451D-A24E-DB2520895117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B130FC83-F7EF-451D-A24E-DB2520895117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B130FC83-F7EF-451D-A24E-DB2520895117}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B130FC83-F7EF-451D-A24E-DB2520895117} = {3C70037C-EA35-427D-8764-4A0A3D6D393E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF077588-DAE9-4B3C-B349-5222F089AA04}
+	EndGlobalSection
+EndGlobal
