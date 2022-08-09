@@ -17,6 +17,7 @@ jobs:
     uses: github-actions-training/.github/.github/workflows/dotnet-build.yml@main
 
   publish:
+    runs-on: ubuntu-latest
     steps:
     - name: Package artifact
       run: |
