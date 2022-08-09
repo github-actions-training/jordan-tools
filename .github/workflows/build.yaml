@@ -15,12 +15,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore --configuration ${{ env.CONFIGURATION }}
 
@@ -47,3 +50,6 @@ jobs:
       with:
         recreate: true
         path: code-coverage-results.md
+
+    - name: Package artifact
+      run: dotnet pack --include-source --configuration ${{ env.CONFIGURATION }} --no-restore -o artifacts -p:PackageVersion=0.0.1
