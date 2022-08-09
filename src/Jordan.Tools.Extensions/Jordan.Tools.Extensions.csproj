@@ -9,4 +9,9 @@
     <RepositoryUrl>https://github.com/github-actions-training/jordan-tools</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Jordan.Tools.Ints\Jordan.Tools.Ints.csproj" />
+    <ProjectReference Include="..\Jordan.Tools.Strings\Jordan.Tools.Strings.csproj" />
+  </ItemGroup>
+
 </Project>
