@@ -2,6 +2,7 @@ name: .NET CI
 
 env:
   CONFIGURATION: Release
+  MAJOR_RELEASE: 1
 
 on:
   push:
@@ -55,9 +56,14 @@ jobs:
         path: code-coverage-results.md
 
     - name: Package artifact
-      run: dotnet pack --include-source --configuration ${{ env.CONFIGURATION }} --no-restore -o artifacts -p:PackageVersion=0.0.${{ github.run_number }} /p:SymbolPackageFormat=snupkg
+      run: |
+        dotnet pack `
+        --include-source `
+        --configuration ${{ env.CONFIGURATION }} `
+        --no-restore `
+        -o artifacts `
+        -p:PackageVersion=${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }} `
+        -p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
-      run: |
-        dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
-        dotnet nuget push 'artifacts/*.snupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+      run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
