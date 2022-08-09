@@ -23,7 +23,7 @@ jobs:
 
       # This step requires that coverlet.collector is added to test project
     - name: Test
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx
 
     - name: Create code coverage report
       run: |
