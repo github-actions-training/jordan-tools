@@ -22,23 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: dotnet-build
     steps:
-    # - name: Package artifact
-    #   run: |
-    #     dotnet pack \
-    #     --include-source \
-    #     --configuration ${{ env.CONFIGURATION }} \
-    #     --no-restore \
-    #     -o artifacts \
-    #     -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
-    #     -p:SymbolPackageFormat=snupkg
-
     - uses: actions/download-artifact@v3
       with:
         name: artifact
         path: artifacts
     
     - name: Authenticate to Github packages
-      run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/github-actions-training/index.json"
+      run: |
+        dotnet nuget add source "https://nuget.pkg.github.com/github-actions-training/index.json" \
+        --username USERNAME \
+        --password ${{ secrets.GITHUB_TOKEN }} \
+        --store-password-in-clear-text \
+        --name github \
 
     - name: Push to Github Packages
       run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
