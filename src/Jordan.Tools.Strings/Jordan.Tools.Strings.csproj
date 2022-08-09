@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>Jordan Lee</Authors>
+    <PackageProjectUrl>https://github.com/github-actions-training/jordan-tools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/github-actions-training/jordan-tools</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
