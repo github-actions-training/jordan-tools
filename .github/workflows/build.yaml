@@ -57,12 +57,12 @@ jobs:
 
     - name: Package artifact
       run: |
-        dotnet pack `
+        dotnet pack \
         --include-source `
         --configuration ${{ env.CONFIGURATION }} `
-        --no-restore `
-        -o artifacts `
-        -p:PackageVersion=${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }} `
+        --no-restore \
+        -o artifacts \
+        -p:PackageVersion=${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }} \
         -p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
