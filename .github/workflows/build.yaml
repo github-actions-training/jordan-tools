@@ -77,5 +77,5 @@ jobs:
         -p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
-      if: github.ref_name == 'master'
+      # if: github.ref_name == 'master'
       run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
