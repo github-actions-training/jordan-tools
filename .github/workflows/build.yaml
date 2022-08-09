@@ -73,7 +73,7 @@ jobs:
         --configuration ${{ env.CONFIGURATION }} \
         --no-restore \
         -o artifacts \
-        -p:PackageVersion=${{ PACKAGE_VERSION }} \
+        -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
         -p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
