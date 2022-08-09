@@ -3,6 +3,8 @@ name: .NET CI
 env:
   CONFIGURATION: Release
   MAJOR_RELEASE: 1
+  PACKAGE_VERSION: ${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }}
+  PACKAGE_SUFFIX: development
 
 on:
   push:
@@ -56,21 +58,19 @@ jobs:
         path: code-coverage-results.md
 
     - name: Set suffix
+      if: github.ref_name != 'master'
       run: |
-        echo "SUFFIX=development" >> $GITHUB_ENV
-        echo ${{ github.ref_name }}
-        echo ${{ github.ref }}
-        echo $GITHUB_ENV
+        echo "PACKAGE_VERSION=${{ PACKAGE_VERSION }}-${{ PACKAGE_SUFFIX }}" >> $GITHUB_ENV
 
     - name: Package artifact
-      if: github.ref_name == 'master'
+      # if: github.ref_name == 'master'
       run: |
         dotnet pack \
         --include-source \
         --configuration ${{ env.CONFIGURATION }} \
         --no-restore \
         -o artifacts \
-        -p:PackageVersion=${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }} \
+        -p:PackageVersion=${{ PACKAGE_VERSION }} \
         -p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
