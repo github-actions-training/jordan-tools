@@ -13,8 +13,7 @@ on:
     branches: [ master ]
 
 jobs:
-  reusable_workflow_job:
-    runs-on: ubuntu-latest
+  dotnet-build:
     uses: github-actions-training/.github/.github/workflows/dotnet-build.yml@main
 
   # build:
