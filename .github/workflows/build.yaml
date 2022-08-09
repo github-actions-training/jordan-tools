@@ -20,7 +20,7 @@ jobs:
 
     - name: Set Environment Variables
       run: |
-        echo "PACKAGE_VERSION=${{ env.MAJOR_RELEASE }}.0.-${{ env.GITHUB_RUN_ATTEMPT }}" >> $GITHUB_ENV
+        echo "PACKAGE_VERSION=${{ env.MAJOR_RELEASE }}.0.${{ github.run_number }}" >> $GITHUB_ENV
 
     - name: Set Environment Variables (Development)
       if: github.ref_name != 'master'
