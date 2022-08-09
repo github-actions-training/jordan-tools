@@ -20,12 +20,12 @@ jobs:
 
     - name: Set Environment Variables
       run: |
-        echo "PACKAGE_VERSION=${{ env.PACKAGE_VERSION }}-${{ env.PACKAGE_SUFFIX }}" >> $GITHUB_ENV
+        echo "PACKAGE_VERSION=${{ env.MAJOR_RELEASE }}.0.-${{ env.GITHUB_RUN_ATTEMPT }}" >> $GITHUB_ENV
 
     - name: Set Environment Variables (Development)
       if: github.ref_name != 'master'
       run: |
-        echo "PACKAGE_VERSION=${{ env.PACKAGE_VERSION }}-${{ env.PACKAGE_SUFFIX }}-${{ env.PACKAGE_SUFFIX }}" >> $GITHUB_ENV
+        echo "PACKAGE_VERSION=${{ env.PACKAGE_VERSION }}-${{ env.PACKAGE_SUFFIX }}" >> $GITHUB_ENV
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
