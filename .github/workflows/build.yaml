@@ -55,6 +55,11 @@ jobs:
         recreate: true
         path: code-coverage-results.md
 
+    - name: Set suffix
+      run: |
+        echo ${{ github.ref_name }}
+        echo "SUFFIX=development" >> $GITHUB_ENV
+
     - name: Package artifact
       if: github.ref_name == 'master'
       run: |
