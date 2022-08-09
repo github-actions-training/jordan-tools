@@ -55,7 +55,7 @@ jobs:
         path: code-coverage-results.md
 
     - name: Package artifact
-      run: dotnet pack --include-source --configuration ${{ env.CONFIGURATION }} --no-restore -o artifacts -p:PackageVersion=0.0.1
+      run: dotnet pack --include-source --configuration ${{ env.CONFIGURATION }} --no-restore -o artifacts -p:PackageVersion=0.0.1 /p:SymbolPackageFormat=snupkg
     
     - name: Push to Github Packages
       run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
