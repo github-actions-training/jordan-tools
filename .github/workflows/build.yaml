@@ -15,19 +15,26 @@ on:
 jobs:
   dotnet-build:
     uses: github-actions-training/.github/.github/workflows/dotnet-build.yml@main
+    with:
+      artifact_name: artifact
 
   publish:
     runs-on: ubuntu-latest
     steps:
-    - name: Package artifact
-      run: |
-        dotnet pack \
-        --include-source \
-        --configuration ${{ env.CONFIGURATION }} \
-        --no-restore \
-        -o artifacts \
-        -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
-        -p:SymbolPackageFormat=snupkg
+    # - name: Package artifact
+    #   run: |
+    #     dotnet pack \
+    #     --include-source \
+    #     --configuration ${{ env.CONFIGURATION }} \
+    #     --no-restore \
+    #     -o artifacts \
+    #     -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
+    #     -p:SymbolPackageFormat=snupkg
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: artifact
+        path: artifacts
     
     - name: Push to Github Packages
       run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
