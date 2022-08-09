@@ -1,5 +1,8 @@
 name: .NET CI
 
+env:
+  CONFIGURATION: Release
+
 on:
   push:
     branches: [ master ]
@@ -19,7 +22,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration ${{ env.CONFIGURATION }}
 
       # This step requires that coverlet.collector is added to test project
     - name: Test
