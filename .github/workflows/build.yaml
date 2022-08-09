@@ -37,6 +37,9 @@ jobs:
         name: artifact
         path: artifacts
     
+    - name: Authenticate to Github packages
+      run: dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/github-actions-training/index.json"
+
     - name: Push to Github Packages
       run: dotnet nuget push 'artifacts/*.nupkg' --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
 
