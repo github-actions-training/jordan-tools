@@ -101,16 +101,16 @@ jobs:
         recreate: true
         path: code-coverage-results.md
 
-  #   - name: Package artifact
-  #     # if: github.ref_name == 'master'
-  #     run: |
-  #       dotnet pack \
-  #       --include-source \
-  #       --configuration ${{ env.CONFIGURATION }} \
-  #       --no-restore \
-  #       -o artifacts \
-  #       -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
-  #       -p:SymbolPackageFormat=snupkg
+    - name: Package artifact
+      # if: github.ref_name == 'master'
+      run: |
+        dotnet pack \
+        --include-source \
+        --configuration ${{ env.CONFIGURATION }} \
+        --no-restore \
+        -o artifacts \
+        -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
+        -p:SymbolPackageFormat=snupkg
     
   #   - name: Push to Github Packages
   #     # if: github.ref_name == 'master'
