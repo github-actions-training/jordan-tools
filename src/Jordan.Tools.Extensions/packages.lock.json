@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net6.0": {
+      "jordan.tools.ints": {
+        "type": "Project"
+      },
+      "jordan.tools.strings": {
+        "type": "Project"
+      }
+    }
+  }
+}
