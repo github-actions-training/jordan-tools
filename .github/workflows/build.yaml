@@ -14,7 +14,7 @@ on:
 
 jobs:
   dotnet-build:
-    uses: github-actions-training/.github/.github/workflows/dotnet-build.yml@main
+    uses: github-actions-training/workflow-templates/.github/workflows/dotnet-build.yml@main
     with:
       artifact_name: artifact
 
