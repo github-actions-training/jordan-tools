@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net6.0": {
+      "Portable.BouncyCastle": {
+        "type": "Transitive",
+        "resolved": "1.9.0",
+        "contentHash": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw=="
+      },
+      "jordan.tools.cryptography": {
+        "type": "Project",
+        "dependencies": {
+          "Portable.BouncyCastle": "[1.9.0, )"
+        }
+      },
+      "jordan.tools.strings": {
+        "type": "Project"
+      }
+    }
+  }
+}

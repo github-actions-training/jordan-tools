@@ -9,11 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3C70037C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jordan.Tools.Strings.Tests", "tests\Jordan.Tools.Strings.Tests\Jordan.Tools.Strings.Tests.csproj", "{B130FC83-F7EF-451D-A24E-DB2520895117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Ints", "src\Jordan.Tools.Ints\Jordan.Tools.Ints.csproj", "{09CDCE39-F9F6-4BD0-9A09-251797B7B5A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jordan.Tools.Ints", "src\Jordan.Tools.Ints\Jordan.Tools.Ints.csproj", "{09CDCE39-F9F6-4BD0-9A09-251797B7B5A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Ints.Tests", "tests\Jordan.Tools.Ints.Tests\Jordan.Tools.Ints.Tests.csproj", "{32C67FC5-D391-4A43-A5EB-AC45EE59FBA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jordan.Tools.Ints.Tests", "tests\Jordan.Tools.Ints.Tests\Jordan.Tools.Ints.Tests.csproj", "{32C67FC5-D391-4A43-A5EB-AC45EE59FBA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Extensions", "src\Jordan.Tools.Extensions\Jordan.Tools.Extensions.csproj", "{940F2BD3-F652-4C1D-87D1-D3015BE01A46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jordan.Tools.Extensions", "src\Jordan.Tools.Extensions\Jordan.Tools.Extensions.csproj", "{940F2BD3-F652-4C1D-87D1-D3015BE01A46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Cryptography", "src\Jordan.Tools.Cryptography\Jordan.Tools.Cryptography.csproj", "{5F6C85BD-3DC3-4D50-AE5D-79BEDA6AB2B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan.Tools.Cryptography.Tests", "tests\Jordan.Tools.Cryptography.Tests\Jordan.Tools.Cryptography.Tests.csproj", "{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{EA8AE111-E501-45CD-8482-E6B326904E96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,18 @@ Global
 		{940F2BD3-F652-4C1D-87D1-D3015BE01A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940F2BD3-F652-4C1D-87D1-D3015BE01A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{940F2BD3-F652-4C1D-87D1-D3015BE01A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6C85BD-3DC3-4D50-AE5D-79BEDA6AB2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6C85BD-3DC3-4D50-AE5D-79BEDA6AB2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6C85BD-3DC3-4D50-AE5D-79BEDA6AB2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6C85BD-3DC3-4D50-AE5D-79BEDA6AB2B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8AE111-E501-45CD-8482-E6B326904E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8AE111-E501-45CD-8482-E6B326904E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8AE111-E501-45CD-8482-E6B326904E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8AE111-E501-45CD-8482-E6B326904E96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +66,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B130FC83-F7EF-451D-A24E-DB2520895117} = {3C70037C-EA35-427D-8764-4A0A3D6D393E}
 		{32C67FC5-D391-4A43-A5EB-AC45EE59FBA9} = {3C70037C-EA35-427D-8764-4A0A3D6D393E}
+		{6D6B37AF-B440-4F86-A8AF-CE6BBF2FB762} = {3C70037C-EA35-427D-8764-4A0A3D6D393E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF077588-DAE9-4B3C-B349-5222F089AA04}
